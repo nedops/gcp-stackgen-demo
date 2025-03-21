@@ -68,3 +68,9 @@ variable "master_ipv4_cidr_block" {
   type        = string
   default     = "172.16.0.0/28"
 }
+
+variable "bastion_disk_encryption_key" {
+  description = "Customer supplied encryption key for bastion host disk (must be base64 encoded)"
+  type        = string
+  sensitive   = true
+}

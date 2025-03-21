@@ -10,6 +10,7 @@ resource "google_compute_instance" "bastion" {
     initialize_params {
       image = "debian-cloud/debian-11"
     }
+    disk_encryption_key_raw = var.bastion_disk_encryption_key
   }
 
   network_interface {
